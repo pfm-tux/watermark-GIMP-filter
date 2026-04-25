@@ -20,7 +20,7 @@ Una volta scaricato e copiato il file nella cartella corretta, su Linux e Mac bi
 bash: </br>
 chmod +x watermark_filter.py
 
-Fato questo, riavvia GIMP → trovi il filtro in Filtri › Watermark › Aggiungi Watermark…
+Fatto questo, riavvia GIMP → trovi il filtro in Filtri › Watermark › Aggiungi Watermark…
 
 
 ## ATTENZIONE ##

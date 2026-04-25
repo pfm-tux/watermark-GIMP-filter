@@ -1,12 +1,12 @@
 # Watermark GIMP filter
 Semplice filtro in python per applicare un watermark testuale completamente personalizzato in GIMP.
 
-Questo filtro è stato programmato per le versioni GIMP 3.x. Probabilmente non funziona con GIMP 2.x
+Questo filtro è stato programmato per le versioni GIMP 3.x. Probabilmente non funziona con GIMP 2.x </br>
 Al momento l'ho testato solo sulla mia versione: ***GIMP 3.2.4***
 
 ## INSTALLAZIONE ##
 
-Scaricare il file.py
+Scaricare il file.py </br>
 Copiare il file nella cartella dei plug-in di GIMP creando una nuova cartella al suo interno con il nome del plug-in stesso:
 
 Su Linux il percorso è: </br>

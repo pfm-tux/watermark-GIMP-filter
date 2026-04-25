@@ -17,9 +17,9 @@ Su Windows il percorso è:</br>
 
 Una volta scaricato e copiato il file nella cartella corretta, su Linux e Mac bisogna rendere il file eseguibile (non avendo un PC Windows non ho potuto testare se si debba fare la stessa cosa anche per questo OS):
 
-bash: </br>
+```bash
 chmod +x watermark_filter.py
-
+```
 Fatto questo, riavvia GIMP → trovi il filtro in Filtri › Watermark › Aggiungi Watermark…
 
 

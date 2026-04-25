@@ -7,7 +7,7 @@ Al momento l'ho testato solo sulla mia versione: ***GIMP 3.2.4***
 ## INSTALLAZIONE ##
 
 Scaricare il file.py
-Copiare il file nella cartella dei plug-in di GIMP:
+Copiare il file nella cartella dei plug-in di GIMP creando una nuova cartella al suo interno con il nome del plug-in stesso:
 
 Su Linux il percorso è: </br>
 ~/.config/GIMP/3.2/plug-ins/watermark_filter/watermark_filter.py  (**← il file scaricato**)
@@ -15,14 +15,14 @@ Su Linux il percorso è: </br>
 Su Windows il percorso è:</br>
 %APPDATA%\GIMP\3.2\plug-ins\watermark_filter\watermark_filter.py
 
-<h2><span style="color: red;">ATTENZIONE</span></h2>
-Il plug-in GIMP 3 deve stare in una cartella il cui nome **coincide** con quello del file .py
+Una volta scaricato e copiato il file nella cartella corretta, su Linux e Mac bisogna rendere il file eseguibile (non avendo un PC Windows non ho potuto testare se si debba fare la stessa cosa anche per questo OS):
 
-
-Una volta scaricato e copiato iol file nella cartella corretta, su Linux e Mac bisogna rendere il file eseguibile (non avendo un PC Windows non ho potuto testare se si debba fare la stessa cosa anche per questo OS):
-
-bash:
+bash: </br>
 chmod +x watermark_filter.py
 
 Faato questo, riavvia GIMP → trovi il filtro in Filtri › Watermark › Aggiungi Watermark…
+
+
+## ATTENZIONE ##
+Il plug-in GIMP 3 deve stare in una cartella il cui nome ***coincide*** con quello del file .py
 

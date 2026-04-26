@@ -76,12 +76,23 @@ def _gimp_load(fpath):
 
 def _gimp_export(image, out_path):
     """
-    Esporta/sovrascrive un file.
-    GIMP 3 API → Gimp.file_overwrite(run_mode, image, drawable, GFile)  [4 argomenti]
+    Esporta/sovrascrive un file tramite PDB gimp-file-save (GIMP 3.2).
+    Parametri: run-mode, image, file, options (opzionale).
     """
-    drawable = image.get_active_drawable()
-    gfile    = Gio.File.new_for_path(out_path)
-    Gimp.file_overwrite(Gimp.RunMode.NONINTERACTIVE, image, drawable, gfile)
+    gfile = Gio.File.new_for_path(out_path)
+
+    pdb = Gimp.get_pdb()
+    proc = pdb.lookup_procedure('gimp-file-save')
+    if proc is None:
+        raise RuntimeError("Procedura PDB 'gimp-file-save' non trovata.")
+
+    config = proc.create_config()
+    config.set_property('run-mode', Gimp.RunMode.NONINTERACTIVE)
+    config.set_property('image',    image)
+    config.set_property('file',     gfile)
+    result = proc.run(config)
+    if result.index(0) != Gimp.PDBStatusType.SUCCESS:
+        raise RuntimeError(f"Errore PDB nell'export di: {out_path}")
 
 
 def _crea_text_layer(image, testo, font_name, font_size, opacita):
